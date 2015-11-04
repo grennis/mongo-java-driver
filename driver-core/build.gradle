@@ -27,6 +27,7 @@ clirr {
 }
 
 dependencies {
+    compile files('libs/androidsasl.jar')
     compile project(':bson')
 
     compile "io.netty:netty-buffer:$nettyVersion", optional
@@ -45,8 +46,9 @@ jar {
                     'javax.management.*',
                     'javax.net.*',
                     'javax.net.ssl.*',
-                    'javax.security.sasl.*',
-                    'javax.security.auth.callback.*',
+                    'gnusasl.javax.security.sasl.*',
+                    'gnu.javax.crypto.jce.*',
+                    'gnusasl.javax.security.auth.callback.*',
                     'org.ietf.jgss.*',
                     'io.netty.*;resolution:=optional',
                     'org.slf4j;resolution:=optional'
